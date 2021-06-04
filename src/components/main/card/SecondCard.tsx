@@ -4,6 +4,11 @@ import { makeStyles, createStyles, Theme } from '@material-ui/core/styles'
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
+        root: {
+            [theme.breakpoints.down('sm')]: {
+                flex: 1,
+            },
+        },
         card1: {
             borderRadius: 3,
             border: 0,
@@ -51,7 +56,7 @@ const useStyles = makeStyles((theme: Theme) =>
 const SecondCard = (): JSX.Element => {
     const classes = useStyles()
     return (
-        <div>
+        <div className={classes.root}>
             <Card className={classes.card1}>
                 <CardHeader
                     classes={{ title: classes.smallP }}

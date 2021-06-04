@@ -18,6 +18,11 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
+        root: {
+            [theme.breakpoints.down('sm')]: {
+                flex: 1,
+            },
+        },
         card1: {
             borderRadius: 3,
             border: 0,
@@ -115,7 +120,7 @@ const FirstCard = (): JSX.Element => {
     // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
     const handleClose = () => setAnchorEl(null)
     return (
-        <div>
+        <div className={classes.root}>
             <Card className={classes.card1}>
                 <CardHeader
                     classes={{ title: classes.cardTitle }}
