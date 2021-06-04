@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme: Theme) =>
             padding: '0 0 0 2em',
             margin: '2px 0',
             justifyContent: 'inherit',
-            fontSize: '0.875em',
+            fontSize: '1em',
             color: theme.palette.primary.light,
             '&:hover': {
                 backgroundColor: '#f5f5f5',
@@ -33,7 +33,7 @@ const useStyles = makeStyles((theme: Theme) =>
             // padding: '0 1em 0 0',
             padding: '0 0 0 2em',
             justifyContent: 'inherit',
-            fontSize: '0.875em',
+            fontSize: '1em',
             color: theme.palette.primary.light,
             backgroundColor: theme.palette.common.white,
             '&:hover': {
