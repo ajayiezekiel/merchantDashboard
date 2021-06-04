@@ -31,6 +31,9 @@ const useStyles = makeStyles((theme: Theme) =>
                 paddingLeft: '0.7em',
                 paddingRight: '0.7em',
             },
+            [theme.breakpoints.down('xs')]: {
+                width: 'inherit',
+            },
         },
         button: {
             color: theme.palette.primary.main,

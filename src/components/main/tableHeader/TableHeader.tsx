@@ -21,6 +21,10 @@ const useStyles = makeStyles((theme: Theme) =>
                 color: theme.palette.secondary.light,
                 backgroundColor: '#f5f5f5',
             },
+            [theme.breakpoints.down('xs')]: {
+                width: '100%',
+                marginBottom: 10,
+            },
         },
         label: {
             textTransform: 'capitalize',
@@ -30,11 +34,30 @@ const useStyles = makeStyles((theme: Theme) =>
             [theme.breakpoints.down('sm')]: {
                 marginBottom: 10,
             },
+            [theme.breakpoints.down('xs')]: {
+                marginRight: 0,
+            },
         },
-        form: {
+        header: {
             display: 'flex',
             justifyContent: 'flex-end',
             flex: 1,
+            // [theme.breakpoints.down('sm')]: {
+            //     display: 'flex',
+            // },
+            [theme.breakpoints.down('xs')]: {
+                justifyContent: 'center',
+                flexDirection: 'column',
+            },
+        },
+        form: {
+            [theme.breakpoints.down('sm')]: {
+                display: 'flex',
+            },
+            [theme.breakpoints.down('xs')]: {
+                display: 'flex',
+                flexDirection: 'column',
+            },
         },
         bigP: {
             fontSize: '1.2em',
@@ -51,8 +74,8 @@ const TableHeader = (): JSX.Element => {
     return (
         <div className={classes.root}>
             <h3>Payout table</h3>
-            <div className={classes.form}>
-                <form>
+            <div className={classes.header}>
+                <form className={classes.form}>
                     <TextField
                         id="input-with-icon-textfield"
                         placeholder="Search something..."

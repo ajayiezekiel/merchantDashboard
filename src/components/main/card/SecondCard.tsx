@@ -20,7 +20,9 @@ const useStyles = makeStyles((theme: Theme) =>
                 paddingLeft: '0.7em',
                 paddingRight: '0.7em',
             },
-            // boxShadow: 'none',
+            [theme.breakpoints.down('xs')]: {
+                width: 'inherit',
+            },
         },
         smallP: {
             padding: '3.5px 0',
