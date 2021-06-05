@@ -42,9 +42,9 @@ const useStyles = makeStyles((theme: Theme) =>
             display: 'flex',
             justifyContent: 'flex-end',
             flex: 1,
-            // [theme.breakpoints.down('sm')]: {
-            //     display: 'flex',
-            // },
+            [theme.breakpoints.down('sm')]: {
+                justifyContent: 'inherit',
+            },
             [theme.breakpoints.down('xs')]: {
                 justifyContent: 'center',
                 flexDirection: 'column',
